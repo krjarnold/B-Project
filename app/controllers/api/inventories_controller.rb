@@ -1,4 +1,4 @@
-class InventoriesController < ApplicationController
+class Api::InventoriesController < ApplicationController
 
   def show
     @inventory = Inventory.find(params[:product_id])
@@ -7,7 +7,7 @@ class InventoriesController < ApplicationController
   def create
     @inventory = Inventory.new(inventory_params)
     if @inventory.save
-      render "inventories/show"
+      render "api/inventories/show"
     else
       render json: @inventory.errors.full_messages, status: 422
     end

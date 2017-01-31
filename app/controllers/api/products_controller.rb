@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class Api::ProductsController < ApplicationController
 
   def index
     @products = Product.all
@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      render "products/show"
+      render "api/products/show"
     else
       render json: @product.errors.full_messages, status: 422
     end
