@@ -5,6 +5,6 @@ class Product < ActiveRecord::Base
   has_many :inventories,
     class_name: "Inventory",
     foreign_key: :product_id,
-    primary_key: :id
+    primary_key: :product_id
 
 end
