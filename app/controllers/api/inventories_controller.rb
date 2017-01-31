@@ -1,7 +1,11 @@
 class Api::InventoriesController < ApplicationController
 
+  def index
+    @inventories = Inventory.all
+  end
+
   def show
-    @inventory = Inventory.find(params[:product_id])
+    @inventory = Inventory.find(params[:id])
   end
 
   def create

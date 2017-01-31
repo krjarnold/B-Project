@@ -5,7 +5,6 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    byebug
     @product = Product.find(params[:id])
   end
 
@@ -20,7 +19,7 @@ end
 
 private
   def product_params
-    params.require(:product).permit(:product_id, :product_name, :product_image)
+    params.require(:product).permit(:product_name, :product_image, :description)
   end
 
 end
