@@ -6,13 +6,13 @@ const hashHistory = require('react-router').hashHistory;
 const ProductItem = React.createClass({
 
   getInitialState() {
-    const potentialProduct = ProductStore.find(this.props.params.productId);
+    const potentialProduct = ProductStore.find(this.props.product.product_id);
     return {product: potentialProduct ? potentialProduct : {} };
   },
 
   componentDidMount() {
     this.token = ProductStore.addListener(this.getProduct);
-    ProductActions.getProduct(Number(this.props.params.productId));
+    ProductActions.getProduct(Number(this.props.product.product_id));
   },
 
   componentWillUnmount() {
@@ -20,13 +20,14 @@ const ProductItem = React.createClass({
   },
 
   getProduct() {
-    const potentialProduct = ProductStore.find(this.props.params.productId);
+    const potentialProduct = ProductStore.find(this.props.product.product_id);
     this.setState({ product: potentialProduct ? potentialProduct : {} });
   },
 
 
 
   render() {
+
     if (!this.state.product) {
       return <div>Loading!</div>;
     } else {

@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 
-  validates :product_id, :product_name, :product_image, presence: true
+  validates :product_name, :product_image, presence: true
 
   has_one :inventory,
     class_name: "Inventory",

@@ -34,7 +34,7 @@ const ProductList= React.createClass({
       return(
         <div className= "product-list-container">products
           <ul className= "product-list">
-            {this.state.products.product_id}
+            {listOfProducts}
           </ul>
         </div>
       );

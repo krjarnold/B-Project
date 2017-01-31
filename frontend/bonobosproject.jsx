@@ -24,7 +24,7 @@ const appRouter = (
 );
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("content");
-  ReactDOM.render(appRouter, root);
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   const root = document.getElementById("content");
+//   ReactDOM.render(appRouter, root);
+// });

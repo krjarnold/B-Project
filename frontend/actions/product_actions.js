@@ -8,7 +8,7 @@ const ProductActions = {
   },
 
   getProduct(id) {
-    ProductAptUtil.getProduct(id, this.receiveProduct);
+    ProductApiUtil.getProduct(id, this.receiveProduct);
   },
 
   receiveAll (products) {

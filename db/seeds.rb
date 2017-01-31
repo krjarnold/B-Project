@@ -9,8 +9,8 @@
 Product.destroy_all
 Inventory.destroy_all
 
-Product.create!(product_id: 1, product_name: "Pants", product_image: "Image of some pants")
-Product.create!(product_id: 2, product_name: "Shirts", product_image: "Image of some shirts")
+Product.create!(product_name: "Pants", product_image: "Image of some pants", description: "These pants are awesome")
+Product.create!(product_name: "Shirts", product_image: "Image of some shirts", description: "I love this shirt")
 
 Inventory.create!(product_id: 1, waist: 28, length: 30, style: "chino", count: 3)
 Inventory.create!(product_id: 1, waist: 28, length: 32, style: "jeans", count: 4)

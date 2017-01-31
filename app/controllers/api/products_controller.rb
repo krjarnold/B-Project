@@ -5,7 +5,8 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:product_id])
+    byebug
+    @product = Product.find(params[:id])
   end
 
   def create
