@@ -34,11 +34,11 @@ const InventoryList = React.createClass({
     });
 
 
-
-
     return (
       <div className="inventory-list-container">Inventory list
-        {styleGroup}
+        <ul className= "inventory-list">
+          <li className= "inventory-list-style">{styleGroup}</li>
+        </ul>
       </div>
     );
   }

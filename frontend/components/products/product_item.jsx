@@ -43,13 +43,12 @@ const ProductItem = React.createClass({
 
       return(
         <div className= "product-container">
-          {productName}
-            <br />
-          <img src= {productImage}></img>
-            <br />
-          {description}
-          <br />
-          <InventoryList inventory= {inventory} />
+          <h2 className= "product-name">{productName}</h2>
+          <img className= "product-image" src= {productImage}></img>
+          <p className= "product-description">{description}</p>
+          <div className= "product-inventory-list">
+            <InventoryList inventory= {inventory} />
+          </div>
         </div>
       );
     }

@@ -6,10 +6,12 @@ const App = React.createClass({
 
 
   render() {
-  
+
     return (
       <div className="app-container">BonobosHW
-        <ProductList/>
+        <div className="app-product-list">
+          <ProductList/>
+        </div>
       </div>
     );
   }
