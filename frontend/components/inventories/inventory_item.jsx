@@ -12,9 +12,9 @@ const InventoryItem = React.createClass({
 
     return (
       <div className="inventory-item-container">
-        <p className= "inventory-items">Waist: {waist}</p>
-        <p className= "inventory-length">Length: {length}</p>
-        <p className= "inventory-count">Count: {count}</p>
+        <p className= "inventory-waist">W- {waist}</p>
+        <p className= "inventory-length">L- {length}</p>
+        <p className= "inventory-count">Amount- {count}</p>
       </div>
     );
   }

@@ -1,3 +1,37 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body, section, article, div, label, input, form, header,
+h1, h2, h3, p, ul, strong, em, a, li, button {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  font-family: inherit;
+  text-decoration: inherit;
+  list-style: none;
+  // text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+body {
+  font-family: 'San Fransisco', "Neue Helvetica", sans-serif;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.app-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  background: #ffffff;
+}

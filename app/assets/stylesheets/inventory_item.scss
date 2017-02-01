@@ -1,0 +1,26 @@
+.inventory-item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f4f4f4;
+  color: #4c4c4c;
+  font-family: "Harriet Text Light";
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0.2em;
+  margin: 0 10px 0 10px;
+
+  .inventory-waist {
+    padding-left: 1em;
+  }
+
+  .inventory-length {
+    padding: 0 2em 0 2em;
+  }
+
+  .inventory-count {
+    padding-right: 1em;
+  }
+
+}
