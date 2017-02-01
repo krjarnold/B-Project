@@ -28,6 +28,8 @@ const ProductList= React.createClass({
         return (<ProductItem key={i} product={product} />);
       });
 
+      // debugger
+
       // if (listOfProducts.length <= 0) {
       //   listOfProducts = <li>Hang on, our products will be here momentarily</li>;
       // }

@@ -15,10 +15,6 @@ ProductStore.find = function (id) {
   return _products[id];
 };
 
-ProductStore.addProduct = function (product) {
-  _products[product.id] = product;
-};
-
 
 ProductStore.addManyProducts = function (products) {
   _products = {};
