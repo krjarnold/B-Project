@@ -1,6 +1,7 @@
 const React = require('react');
 const ProductStore = require('../../stores/product_store');
 const ProductActions = require('../../actions/product_actions');
+const InventoryList = require('../inventories/inventory_list');
 const hashHistory = require('react-router').hashHistory;
 
 const ProductItem = React.createClass({
@@ -35,6 +36,11 @@ const ProductItem = React.createClass({
       const productImage = this.props.product.product_image;
       const description = this.props.product.description;
 
+      const inventory = this.props.product.inventory;
+      // let listOfInventory = this.props.product.inventory.map( (inventory, i) => {
+      //   return (<InventoryList key={i} inventory={inventory} />);
+      // });
+
       return(
         <div className= "product-container">
           {productName}
@@ -42,6 +48,8 @@ const ProductItem = React.createClass({
           <img src= {productImage}></img>
             <br />
           {description}
+          <br />
+          <InventoryList inventory= {inventory} />
         </div>
       );
     }
