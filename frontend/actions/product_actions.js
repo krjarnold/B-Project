@@ -21,7 +21,7 @@ const ProductActions = {
   receiveProduct (product) {
     AppDispatcher.dispatch({
       actionType: "RECEIVED_PRODUCT",
-      products: products
+      product: product
     });
   }
 };

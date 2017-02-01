@@ -29,21 +29,22 @@ parsed = CSV.parse(product_file.gsub('"', ''))
 
 # product_file = File.read(Rails.root.join('lib', 'seeds', 'products.csv'))
 # csv = CSV.parse(product_file, :headers => true, :encoding => 'ISO-8859-1')
-parsed.each do |row|
+parsed.each_with_index do |row, i|
+  next if i == 0
   t = Product.new
   t.product_id = row[0]
-  t.product_name = row[1]
+  t.product_name = row[1].titleize
   t.product_image = row[2]
-  t.description = row[3]
+  t.description = row[3].gsub("+", ",")
   t.save!
 end
 
 CSV.foreach(Rails.root.join('lib', 'seeds', 'inventory.csv')) do |row|
-  t= Inventory.new
-  t.product_id = row[0]
+   t= Inventory.new
+   t.product_id = row[0]
    t.waist = row[1]
    t.length = row[2]
-   t.style = row[3]
+   t.style = row[3].titleize.strip
    t.count = row[4]
    t.save!
 end

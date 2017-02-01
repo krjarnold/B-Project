@@ -22,9 +22,8 @@ ProductStore.addProduct = function (product) {
 
 ProductStore.addManyProducts = function (products) {
   _products = {};
-
   products.forEach( (product) => {
-    _products[product.id] = product;
+    _products[product.product_id] = product;
   });
 };
 

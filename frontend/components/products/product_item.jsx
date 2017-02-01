@@ -31,8 +31,17 @@ const ProductItem = React.createClass({
     if (!this.state.product) {
       return <div>Loading!</div>;
     } else {
+      const productName = this.props.product.product_name;
+      const productImage = this.props.product.product_image;
+      const description = this.props.product.description;
+
       return(
-        <div className= "product-container">check what to put here
+        <div className= "product-container">
+          {productName}
+            <br />
+          <img src= {productImage}></img>
+            <br />
+          {description}
         </div>
       );
     }

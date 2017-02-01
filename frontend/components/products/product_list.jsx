@@ -27,6 +27,7 @@ const ProductList= React.createClass({
       let listOfProducts = this.state.products.map( (product, i) => {
         return (<ProductItem key={i} product={product} />);
       });
+    
       // if (listOfProducts.length <= 0) {
       //   listOfProducts = <li>Hang on, our products will be here momentarily</li>;
       // }
