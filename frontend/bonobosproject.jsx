@@ -17,6 +17,7 @@ const ProductItem = require("./components/products/product_item");
 const appRouter = (
   <Router history={hashHistory}>
     <Route path="/" component={ App }>
+      <IndexRoute component= {ProductList} />
       <Route path="products" component={ ProductList } />
       <Route path="products/:productId" component={ ProductItem } />
     </Route>

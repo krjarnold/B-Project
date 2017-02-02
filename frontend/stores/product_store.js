@@ -29,10 +29,10 @@ ProductStore.__onDispatch = function (payload) {
       ProductStore.addManyProducts(payload.products);
       ProductStore.__emitChange();
       break;
-    case "RECEIVED_PRODUCT":
-      ProductStore.addProduct(payload.product);
-      ProductStore.__emitChange();
-      break;
+    // case "RECEIVED_PRODUCT":
+    //   ProductStore.addProduct(payload.product);
+    //   ProductStore.__emitChange();
+    //   break;
   }
 };
 

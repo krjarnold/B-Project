@@ -1,0 +1,43 @@
+.footer-container {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .footer-bonobos-link{
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    &:hover {
+      color: #378373
+    }
+
+  }
+
+  .footer-created-container {
+
+    .footer-created-by {
+      padding: 5px 5px 20px 5px;
+      font-family: "Harriet Text Light";
+      &:hover {
+        color: #378373
+      }
+
+    }
+
+    .footer-github {
+      position: relative;
+      }
+      .footer-svg {
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        &:hover {
+          fill: #378373
+      }
+    }
+  }
+
+
+}
