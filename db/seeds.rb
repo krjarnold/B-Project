@@ -11,13 +11,67 @@ require 'csv'
 Product.destroy_all
 Inventory.destroy_all
 
-product_file = File.read(Rails.root.join('lib', 'seeds', 'products.csv'))
-parsed = CSV.parse(product_file.gsub('"', ''))
+product_file = File.path(Rails.root.join('lib', 'seeds', 'products.csv'))
+new_file = File.new(product_file, 'r')
+
+file2 = []
+new_file.each_line("\n") do |row|
+  file2 << [row]
+end
+
+new_entries = []
+file2.each_with_index do |row, i|
+  next if i == 0
+  parse_entry = row[0].split(",")
+  if parse_entry.length > 3
+    parse_entry[3] = parse_entry[3..-1].join(",")
+  end
+  new_entries << parse_entry[0..3]
+end
+
+new_entries.each do |row|
+  a = CSV.parse_line(row[0])
+  b = CSV.parse_line(row[1])
+  c = row[2].gsub('"',"")
+  d = row[3].gsub('"',"")
+  t = Product.new
+  t.product_id = a[0].to_i
+  t.product_name = b[0].titleize
+  t.product_image = c
+  t.description = d
+  t.save!
+end
+# debugger
+
+# product_file = File.read(Rails.root.join('lib', 'seeds', 'products.csv'))
+# tester = CSV.parse_line(product_file)
+# debugger
+# parsed = CSV.parse(product_file.)
+
+# csv_text = open('https://github.com/bonobos/fullstack_homework/blob/master/inventory.csv')
+# csv = CSV.parse(csv_text, :headers => true)
+# csv.each do |row|
+#   puts row
+# end
+
+
+# parsed = CSV.parse(product_file.gsub('"', ''))
+# parsed.each_with_index do |row, i|
+#   next if i == 0
+#   t = Product.new
+#   t.product_id = row[0]
+#   t.product_name = row[1].titleize
+#   t.product_image = row[2]
+#   t.description = row[3].gsub("+", ",")
+#   t.save!
+# end
+
 # debugger
 # CSV.foreach(product_file.gsub('"', '')) do |row|
 #   Product.create(row.to_hash)
 # end
-# CSV.foreach(Rails.root.join('lib', 'seeds', 'products.csv')) do |row|
+
+# CSV.foreach(Rails.root.join('lib', 'seeds', 'products.csv'), quote_char: => "\x00") do |row|
 #   Product.create(row.to_hash)
 # end
 
@@ -27,17 +81,16 @@ parsed = CSV.parse(product_file.gsub('"', ''))
 #
 # Product.import columns, values
 
-# product_file = File.read(Rails.root.join('lib', 'seeds', 'products.csv'))
-# csv = CSV.parse(product_file, :headers => true, :encoding => 'ISO-8859-1')
-parsed.each_with_index do |row, i|
-  next if i == 0
-  t = Product.new
-  t.product_id = row[0]
-  t.product_name = row[1].titleize
-  t.product_image = row[2]
-  t.description = row[3].gsub("+", ",")
-  t.save!
-end
+# product_file = File.path(Rails.root.join('lib', 'seeds', 'products.csv'))
+# CSV.foreach(product_file) do |row|
+#   t = Product.new
+#   t.product_id = row[0]
+#   t.product_name = row[1].titleize
+#   t.product_image = row[2]
+#   t.description = row[3]
+#   t.save!
+# end
+
 
 CSV.foreach(Rails.root.join('lib', 'seeds', 'inventory.csv')) do |row|
    t= Inventory.new
