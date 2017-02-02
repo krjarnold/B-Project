@@ -1,10 +1,14 @@
 .inventory-list-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   background-color: #f4f4f4;
-  border: 10px solid #f4f4f4;
-  padding: 1em;
 
     .inventory-list-style {
-      margin-bottom: 2em;
+      padding: 1em;
+      border-right: 10px solid #ffffff;
+      flex: auto;
+      max-height: 650px;
 
       .inventory-style-name {
         text-align: center;
@@ -30,11 +34,14 @@
         }
 
         .inventory-headers-length {
-          padding: 0 0.7em 0 0.7em;
 
         }
-        .inventory-headers.count {
+        .inventory-headers-count {
+          margin-right: 0.5em;
         }
       }
+    .inventory-item-container {
+
+    }
     }
 }
