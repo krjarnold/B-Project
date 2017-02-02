@@ -35,11 +35,8 @@ const ProductItem = React.createClass({
       const productName = this.props.product.product_name;
       const productImage = this.props.product.product_image;
       const description = this.props.product.description;
-
       const inventory = this.props.product.inventory;
-      // let listOfInventory = this.props.product.inventory.map( (inventory, i) => {
-      //   return (<InventoryList key={i} inventory={inventory} />);
-      // });
+
 
       return(
         <div className= "product-container">

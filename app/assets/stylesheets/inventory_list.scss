@@ -1,14 +1,40 @@
 .inventory-list-container {
   background-color: #f4f4f4;
   border: 10px solid #f4f4f4;
-  padding: 1em 2em 1em 1em;
-
-  .inventory-list {
+  padding: 1em;
 
     .inventory-list-style {
-      font-size: 16px;
-      font-weight: 500;
+      margin-bottom: 2em;
 
+      .inventory-style-name {
+        text-align: center;
+
+        h3 {
+          padding-top: 1em;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+
+      .inventory-headers {
+         display: flex;
+         justify-content: space-between;;
+         align-items: center;
+         font-family: "Harriet Text Light";
+         padding-top: 0.5em;
+         text-align: center;
+         font-size: 14px;
+
+        .inventory-headers-waist {
+          padding-left: 0.5em;
+        }
+
+        .inventory-headers-length {
+          padding: 0 0.7em 0 0.7em;
+
+        }
+        .inventory-headers.count {
+        }
+      }
     }
-  }
 }

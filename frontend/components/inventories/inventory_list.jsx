@@ -3,15 +3,27 @@ const InventoryItem = require('./inventory_item');
 
 const InventoryList = React.createClass({
 
+  createHeaders (style) {
+    const headers =
+      <div className = "inventory-headers">
+        <p className= "inventory-headers-waist">Waist</p>
+        <p className= "inventory-headers-length">Length</p>
+        <p className= "inventory-headers-count">Amount</p>
+      </div>;
+      let styles =
+        <li className= "inventory-style-name">
+          <h3>{style}</h3>
+          {headers}
+        </li>;
+        return styles;
+  },
+
 
   render() {
 
-    // let listOfInventory = this.props.inventory.map( (inventory, i) => {
-    //   return (<InventoryItem key={i} inventory={inventory} />);
-    // });
-
     let listOfInventory = this.props.inventory;
 
+    //Groups the inventories by stype
     let groupedInventory = {};
     listOfInventory.forEach( (item) => {
       if (groupedInventory.hasOwnProperty(item.style)) {
@@ -23,22 +35,29 @@ const InventoryList = React.createClass({
 
     });
 
+    //Creates an array of styles
     let styleGroup = Object.keys(groupedInventory).map( (key) => {
       return [key, []];
     });
+
+
+    //Creates an InventoryItem component for each listing in the style group
     styleGroup.forEach( (item, i) => {
       let invItems = groupedInventory[item[0]].map( (inventory, i) => {
         return (<InventoryItem key={i} inventory={inventory} />);
       });
+      let headers = this.createHeaders(item[0]);
+      item[0] = headers;
       item[1] = invItems;
     });
 
-
     return (
       <div className="inventory-list-container">
-        <ul className= "inventory-list">
-          <li className= "inventory-list-style">{styleGroup}</li>
-        </ul>
+        <div className= "inventory-list">
+          <ul className= "inventory-list-style">
+            {styleGroup}
+          </ul>
+        </div>
       </div>
     );
   }
