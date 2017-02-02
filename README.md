@@ -17,17 +17,17 @@
   * Clone repository: https://github.com/krjarnold/B-Project.git
   * Navigate to repository
   * Make sure that PostgreSQL is running
-  * Run- bundle exec bundle install
-  * Run- npm install
-  * In another terminal window run- webpack -w (to keep webpack running)
-  * Open another terminal window and run- bundle exec rails server
+  * Run: bundle exec bundle install
+  * Run: npm install
+  * In another terminal window run: webpack -w (to keep webpack running)
+  * Open another terminal window and run: bundle exec rails server
   * View webpage locally on http://localhost:3000/#/
 
 #####To seed database from CSV file
   * Files are located in lib/seeds (were originally pulled raw from Github full-stack homework repository)
-  * File name and path much match original for seeds file to run
-  * To run migrations run- rake db:migrate
-  * To seed database run- rake db:seed
+  * File name and path MUST match original for seed file to run
+  * To run migrations run: rake db:migrate
+  * To seed database run: rake db:seed
 
 
 #####To view the json sent up on api calls from Rails (No React front-end)
