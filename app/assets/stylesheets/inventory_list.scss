@@ -5,7 +5,7 @@
   background-color: #f4f4f4;
 
     .inventory-list-style {
-      padding: 1em;
+      padding: 1em 1em 3.5em 1em;
       border-right: 10px solid #ffffff;
       flex: auto;
       max-height: 650px;
@@ -14,7 +14,7 @@
         text-align: center;
 
         h3 {
-          padding-top: 1em;
+          padding-top: 0.5em;
           font-size: 18px;
           font-weight: bold;
         }
@@ -24,8 +24,8 @@
          display: flex;
          justify-content: space-between;;
          align-items: center;
-         font-family: "Harriet Text Light";
-         padding-top: 0.5em;
+         font-family: 'Harriet Text Light','Playfair Display', serif;
+         padding-top: 0.3em;
          text-align: center;
          font-size: 14px;
 

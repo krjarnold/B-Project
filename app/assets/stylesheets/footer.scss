@@ -18,7 +18,7 @@
 
     .footer-created-by {
       padding: 5px 5px 20px 5px;
-      font-family: "Harriet Text Light";
+      font-family: 'Harriet Text Light','Playfair Display', serif;
       &:hover {
         color: #378373
       }
@@ -31,7 +31,7 @@
         position: absolute;
         height: 16px;
         width: 16px;
-        
+
         &:hover {
           fill: #378373
       }

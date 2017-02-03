@@ -5,13 +5,13 @@
   justify-content: center;
   background: #f4f4f4;
   color: #4c4c4c;
-  font-family: "Harriet Text Light";
   font-size: 12px;
-  font-weight: normal;
+  font-weight: 300;
   padding: 0.2em;
   margin: 0 10px 0 10px;
 
   .inventory-waist {
+    font-size: 11px;
     padding: 0.3em 0 0.3em 0;
     text-align: center;
     width: 2em;
@@ -19,6 +19,7 @@
   }
 
   .inventory-length {
+    font-size: 11px;
     padding: 0.3em 0 0.3em 0;
     text-align: center;
     margin-left: 2.5em;
@@ -28,6 +29,7 @@
   }
 
   .inventory-count {
+    font-size: 11px;
     padding: 0.3em 0 0.3em 0;
     text-align: center;
     width: 2em;
