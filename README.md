@@ -1,10 +1,10 @@
 # Bonobos Full-Stack Homework- Kaelyn Arnold
 
-###[Live site on Heroku](https://bonobos.herokuapp.com/)
+### [Live site on Heroku](https://bonobos.herokuapp.com/)
 
 ![Bonobos Project](/app/assets/images/bonobos_project.png)
 
-#####Project information
+##### Project information
   * This project was build using Ruby on Rails and React.js
   * It is hosted live on Heroku at https://bonobos.herokuapp.com/
   * Requires:
@@ -13,7 +13,7 @@
     * Node version 6.2.1
     * PostgreSQL (can download here: https://www.postgresql.org/)
 
-#####To set up from Github repository for viewing/editing:
+##### To set up from Github repository for viewing/editing:
   * Clone repository: https://github.com/krjarnold/B-Project.git
   * Navigate to repository
   * Make sure that PostgreSQL is running
@@ -23,7 +23,7 @@
   * Open another terminal window and run: bundle exec rails server
   * Seed your database (see next step)
 
-#####To seed database from CSV file
+##### To seed database from CSV file
   * Files are located in lib/seeds (were originally pulled raw from Github full-stack homework repository)
   * File name and path MUST match original for seed file to run
   * To run migrations run: rake db:migrate
@@ -31,7 +31,7 @@
   * View webpage locally on http://localhost:3000/#/
 
 
-#####To view the json sent up on api calls from Rails (No React front-end)
+##### To view the json sent up on api calls from Rails (No React front-end)
   * Go to http://localhost:3000/
   * To view all products with their inventories
     * Go to http://localhost:3000/api/products
